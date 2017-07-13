@@ -1,0 +1,38 @@
+.background{
+    background: url("../storage/images/pexels-photo.jpeg");
+    height: 650px;
+    font-family: Oxygen;
+}
+.workinglist ul {
+    list-style-type: decimal;
+    border: solid 1px;
+    border-color: #bebee8;
+    border-radius: 5px;}
+.workinglist li{
+    height: 40px;
+    padding-top: 10px;
+}
+.workinglist{
+    width: 650px;
+
+}
+#delete button.btn {
+
+    padding-bottom: 2px;
+    font-size: 8px;
+    text-align: center;
+    float: right;
+    background: transparent;
+}
+button#new {
+    top: 511px;
+    right: -109px;
+    position: absolute;
+    padding: 32px;
+    border-radius: 50%;
+    color: white;
+    background: transparent;
+}
+button#new:hover{
+    border: solid 1px white;
+}
