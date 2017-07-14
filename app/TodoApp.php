@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Class Gag
  * @package App
+ * @mixin \Eloquent
  */
 class TodoApp extends Model
 {

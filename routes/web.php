@@ -24,6 +24,14 @@ Route::post('/', function(){
     $task->type = 'text'; // point to type column
     $task->content=$input_text; // assign content $input_text to "content" column
     $task->save(); // save to database
+    return back();
+});
+Route::get('/delete', function (){
+    $id =  request('id');
+    TodoApp::find($id)->delete();
+    return redirect()->back();
+
+
 });
 
 

@@ -1,26 +1,27 @@
-.background {
+.background{
   background: url("../storage/images/pexels-photo.jpeg");
   height: 650px;
-  font-family: Oxygen; }
-
+  font-family: Oxygen;
+}
 .workinglist ul {
   list-style-type: decimal;
   border: solid 1px;
   border-color: #bebee8;
-  border-radius: 5px; }
-
-.workinglist li {
+  border-radius: 5px;}
+.workinglist li{
   height: 40px;
-  padding-top: 3px; }
+  padding-top: 3px;
+}
+.workinglist{
+  width: 650px;
 
-.workinglist {
-  width: 650px; }
+}
 
 button#delete {
   background: transparent;
   font-size: 8px;
-  float: right; }
-
+  float: right;
+}
 button#new {
   top: 511px;
   right: -109px;
@@ -28,19 +29,18 @@ button#new {
   padding: 32px;
   border-radius: 50%;
   color: white;
-  background: transparent; }
-
-button#new:hover {
-  border: solid 1px white; }
-
-#add {
+  background: transparent;
+}
+button#new:hover{
+  border: solid 1px white;
+}
+#add{
   padding: 5px;
   background: transparent;
   margin: 0 auto;
   border: 0 black solid;
-  display: none; }
-
-#form-control {
-  width: 620px; }
-
-/*# sourceMappingURL=style.css.map */
+  display: none;
+}
+#form-control{
+  width: 620px;
+}

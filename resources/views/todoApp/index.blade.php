@@ -19,15 +19,23 @@
         <div class="row">
             <div class="workinglist">
                 <ul>
-                    <li>
-                        <div class="col-xs-9 col-sm-9 " id="worklist">
-                            ngay thu nhat lam gi
-                        </div>
-                        <div class="col-xs-3 col-sm-3" id="delete">
-                            <button type="button" class="btn">Delete</button>
-                        </div>
-                    </li>
-
+                    <?php
+                    use App\TodoApp;
+                    $newtasks = TodoApp::latest()->get();
+                    foreach ($newtasks as $newtask){
+                        $congviec = $newtask->content;
+//                        $id = $_GET['id'];
+//                        echo $id;
+                        echo "<li><div class='col xs-9 col-sm-9' id='worklist'>$congviec</div>
+                              <div class='col-xs-3 col-sm-3'>
+                              <form action='delete' >
+                              <button type='submit' class='btn' id='delete'>Delete</button>
+                              <input type='hidden' name='id' value='$newtask->id' >
+                              </form>
+                             </div>
+                            </li>";
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
