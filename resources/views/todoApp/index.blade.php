@@ -23,19 +23,21 @@
                     use App\TodoApp;
                     $newtasks = TodoApp::latest()->get();
                     foreach ($newtasks as $newtask){
-                        $congviec = $newtask->content;
-//                        $id = $_GET['id'];
-//                        echo $id;
-                        echo "<li><div class='col xs-9 col-sm-9' id='worklist'>$congviec</div>
+                    $congviec = $newtask->content;
+                    $done =$newtask->done; ?>
+                        <li><div class='col xs-9 col-sm-9 <?php if($done==1){echo 'done';} ?>' id='worklist' ><?php echo $congviec; ?> </div>
                               <div class='col-xs-3 col-sm-3'>
                               <form action='delete' >
                               <button type='submit' class='btn' id='delete'>Delete</button>
-                              <input type='hidden' name='id' value='$newtask->id' >
+                              <input type='hidden' name='id' value='<?php echo $newtask->id; ?>' >
+                              </form>
+                              <form action='done' >
+                                  <input type='hidden' name='id' value='<?php echo $newtask->id; ?>'>
+                              <button type='submit' class='btn' id='done'>Done</button>
                               </form>
                              </div>
-                            </li>";
-                    }
-                    ?>
+                        </li>
+                  <?php } ?>
                 </ul>
             </div>
         </div>
@@ -43,8 +45,7 @@
     </div>
 
     <div class="col-xs-6 col-sm-2">
-        <button type="button" class="btn" id="new">New</button>
-        <a class="button-upload" href="#" type="button" data-toggle="modal" data-target="#myModal"> + Upload</a>
+        <a class="button-upload" href="#" type="button" data-toggle="modal" data-target="#myModal" id="new"> + Upload</a>
 
     </div>
 

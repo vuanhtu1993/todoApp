@@ -1,7 +1,10 @@
 .background{
   background: url("../storage/images/pexels-photo.jpeg");
-  height: 650px;
+  height: 690px;
   font-family: Oxygen;
+}
+.work {
+  margin-bottom: 45px;
 }
 .workinglist ul {
   list-style-type: decimal;
@@ -13,16 +16,32 @@
   padding-top: 3px;
 }
 .workinglist{
-  width: 650px;
+  width: 688px;
 
 }
+button#done {
+  background: transparent;
+  font-size: 8px;
+  float: right;
+  margin-top: -14px;
+}
+#done:hover{
+  color: #1b6d85;
+}
+.done{
+  text-decoration: line-through;
+}
 
-button#delete {
+#delete {
   background: transparent;
   font-size: 8px;
   float: right;
 }
-button#new {
+
+#delete:hover{
+  color: white;
+}
+#new {
   top: 511px;
   right: -109px;
   position: absolute;
@@ -31,8 +50,8 @@ button#new {
   color: white;
   background: transparent;
 }
-button#new:hover{
-  border: solid 1px white;
+#new:hover{
+  color: #1b6d85;
 }
 #add{
   padding: 5px;
@@ -41,6 +60,7 @@ button#new:hover{
   border: 0 black solid;
   display: none;
 }
+
 #form-control{
   width: 620px;
 }
